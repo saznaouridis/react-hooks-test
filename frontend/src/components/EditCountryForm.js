@@ -39,8 +39,4 @@ const EditCountryForm = props => {
     </form>
   )
 }
-<<<<<<< HEAD:frontend/src/components/EditCountryForm.js
 export default EditCountryForm
-=======
-export default EditCountryForm
->>>>>>> b87b3c749968521beae6b0fefad907308d8d4d64:frontend/src/forms/EditCountryForm.js

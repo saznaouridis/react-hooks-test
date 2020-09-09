@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react'
+
 const AddCountryForm = props => {
 	const initialState = { }
 	const [ country, setCountry ] = useState(initialState)
@@ -36,12 +37,10 @@ const AddCountryForm = props => {
 			className="form-control" 
 			value={country.name} 
 			onChange={handleInputChange} />
-<<<<<<< HEAD:frontend/src/components/AddCountryForm.js
 			
-=======
->>>>>>> b87b3c749968521beae6b0fefad907308d8d4d64:frontend/src/forms/AddCountryForm.js
 				<label for="capitals">Capitals</label>
 				<input type="text" name="capital" value={country.capital} onChange={handleInputChange} />
+			
 			<p>
 				<button className="btn btn-success">Add</button>
 			</p>
@@ -49,9 +48,4 @@ const AddCountryForm = props => {
 		</Fragment>
 	)
 }
-<<<<<<< HEAD:frontend/src/components/AddCountryForm.js
 export default AddCountryForm
-=======
-export default AddCountryForm;
-
->>>>>>> b87b3c749968521beae6b0fefad907308d8d4d64:frontend/src/forms/AddCountryForm.js
