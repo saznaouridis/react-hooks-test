@@ -1,18 +1,17 @@
-import React, { useState, Fragment, useEffect } from 'react';
+import React, { useState, Fragment, useEffect } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-//components 
-<<<<<<< HEAD
 
-=======
->>>>>>> b87b3c749968521beae6b0fefad907308d8d4d64
+//components 
+
 import AddCountryForm from './components/AddCountryForm'
 import EditCountryForm from './components/EditCountryForm'
 import CountryForm from './components/CountryForm'
 import axios from 'axios';
 import './App.css'
+
 const App = () => {
+
 	// Data
-<<<<<<< HEAD
 	
 	const [countriesData,setCountriesData] = useState([]);	
 	const initialState = { id: null, name: '', capital: '' }
@@ -22,25 +21,14 @@ const App = () => {
 	const [ curCountry, setCurCountry ] = useState(initialState)
 	const [ edit, setEdit ] = useState(false)
 
-=======
-	const [countriesData,setCountriesData] = useState([]);	
-	const initialState = { id: null, name: '', capital: '' };
-	// Setting state
-	const [ countries, setCountries ] = useState(countriesData);
-	const [ curCountry, setCurCountry ] = useState(initialState);
-	const [ edit, setEdit ] = useState(false);
->>>>>>> b87b3c749968521beae6b0fefad907308d8d4d64
 	// CRUD operations
+
 	const addCountry = async (country) => {
 		const id = await axios.post(`/`,country);
 		getData();
 	}
 	const deleteCountry = async (id) => {
-<<<<<<< HEAD
 		setEdit(false)
-=======
-		setEdit(false);
->>>>>>> b87b3c749968521beae6b0fefad907308d8d4d64
 		await axios.delete(`/${id}`);
 		getData();
 	}
@@ -59,13 +47,8 @@ const App = () => {
 		getData();
 	},[])
 	const editRow = async (country) => {
-<<<<<<< HEAD
 		setEdit(true)
 		setCurCountry(country)
-=======
-		setEdit(true);
-		setCurCountry(country);
->>>>>>> b87b3c749968521beae6b0fefad907308d8d4d64
 	}
 	return (
 	<Router>
@@ -131,8 +114,4 @@ const App = () => {
 		return <h1 id = "hed3">Info</h1>;
 	  }
 }
-<<<<<<< HEAD
 export default App
-=======
-export default  App;
->>>>>>> b87b3c749968521beae6b0fefad907308d8d4d64
