@@ -55,13 +55,8 @@ const App = () => {
 		<div>	
 		<Header />
 			<Switch>
-				<Route path="/info">
-					<Info />
-				</Route>
-				<Route path="/country">
-					<div className="container">
-						<h1 id = "hed1">Application</h1>
-						<div className="flex-row">
+				<Route path="/add">
+				<div className="flex-row">
 							<div className="flex-large classleft">
 								{edit ? (
 								<Fragment>
@@ -80,11 +75,16 @@ const App = () => {
 								</Fragment>
 								)}
 							</div>
+				</div>
+				</Route>
+				<Route path="/country">
+					<div className="container">
+						<h1 id = "hed1">Application</h1>
 							<div className="flex-large classright">
 								<h2>View</h2>
 								<CountryForm countries={countries} editRow={editRow} deleteCountry={deleteCountry} />
 							</div>
-						</div>
+						
 					</div>
 				</Route>
 				<Route path="/">
@@ -97,9 +97,6 @@ const App = () => {
 	)
 	function Home() {
 		return <h1 id = "hed2">Home</h1>;
-	  }
-	function Info() {
-		return <h1 id = "hed3">Info</h1>;
 	  }
 }
 export default App

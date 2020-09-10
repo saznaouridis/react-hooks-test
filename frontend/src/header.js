@@ -58,7 +58,7 @@ const Header = (props) => {
     },
     {
       menuTitle: "Contact",
-      pageURL: "/info"
+      pageURL: "/add"
     },
     {
       menuTitle: "About",
@@ -119,9 +119,9 @@ const Header = (props) => {
               </Button>
               <Button
                 variant="contained"
-                onClick={() => handleButtonClick("/info")}
+                onClick={() => handleButtonClick("/add")}
               >
-                info
+                Add/Edit
               </Button>
               <Button
                 variant="contained"
