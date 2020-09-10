@@ -56,18 +56,14 @@ const App = () => {
 		<Header />
 			<Switch>
 				<Route path="/info">
-				<Fragment>
-					<h2>Fill the brackets</h2>
-					<AddCountryForm addCountry={addCountry} />
-				</Fragment>
-					
+					<Info />
 				</Route>
 				<Route path="/country">
 					<div className="container">
 						<h1 id = "hed1">Application</h1>
 						<div className="flex-row">
 							<div className="flex-large classleft">
-								
+								{edit ? (
 								<Fragment>
 									<h2>Edit</h2>
 									<EditCountryForm
@@ -77,9 +73,12 @@ const App = () => {
 									updateCountry={updateCountry}
 									/>
 								</Fragment>
-	
-								
-								
+								) : (
+								<Fragment>
+									<h2>Fill the brackets</h2>
+									<AddCountryForm addCountry={addCountry} />
+								</Fragment>
+								)}
 							</div>
 							<div className="flex-large classright">
 								<h2>View</h2>
