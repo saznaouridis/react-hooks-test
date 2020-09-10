@@ -39,7 +39,8 @@ const CountryForm = props => {
     <TableRow>
     <StyledTableCell>Country</StyledTableCell>
     <StyledTableCell align="right">Capital</StyledTableCell>
-    <StyledTableCell align="right">Actions</StyledTableCell>
+    <StyledTableCell align="right">Update</StyledTableCell>
+    <StyledTableCell align="right">Delete</StyledTableCell>
     </TableRow>
   </TableHead>
   <TableBody>
