@@ -47,27 +47,32 @@ const CountryForm = props => {
     props.countries.map(country => 
     <Fragment>
       <StyledTableRow key={country.id}>
-       <StyledTableCell component="th" scope="row">{country.capital}</StyledTableCell>
-       <StyledTableCell align="right">{country.name}</StyledTableCell>
-       <StyledTableCell align="right">{country.id}</StyledTableCell>
-      </StyledTableRow>
-      <button
-      onClick ={() => {
-        props.editRow(country)
-      }
-      }
-      className="button muted-button"
+       <StyledTableCell component="th" scope="row">{country.name}</StyledTableCell>
+       <StyledTableCell align="right">{country.capital}</StyledTableCell>
+       <StyledTableCell align="right">
+         <button
+           onClick ={() => {
+            props.editRow(country)
+           }
+         }
+           className="button muted-button"
       >
         Edit
-      </button>
-      <button
+        </button>
+        </StyledTableCell>
+        <StyledTableCell align="right">
+        <button
         onClick={() => {
           props.deleteCountry(country.id)
         }}
           className="button muted-button"
         >
           Delete  
-      </button>
+      </button>   
+      </StyledTableCell>
+      </StyledTableRow>
+    
+     
   )
     </Fragment>)
     ) : (
