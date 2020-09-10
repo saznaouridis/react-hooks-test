@@ -71,7 +71,9 @@ const App = () => {
 								) : (
 								<Fragment>
 									<h2>Fill the brackets</h2>
-									<AddCountryForm addCountry={addCountry} />
+									<AddCountryForm 
+									addCountry={addCountry} 
+									/>
 								</Fragment>
 								)}
 							</div>
