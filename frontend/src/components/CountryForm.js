@@ -18,8 +18,6 @@ const StyledTableCell = withStyles((theme) => ({
     fontSize: 14,
   },
 }))(TableCell);
-
-
 const StyledTableRow = withStyles((theme) => ({
   root: {
     '&:nth-of-type(odd)': {
@@ -27,17 +25,13 @@ const StyledTableRow = withStyles((theme) => ({
     },
   },
 }))(TableRow);
-
 const useStyles = makeStyles({
   table: {
     minWidth: 700,
   },
 });
-
 const CountryForm = props => {
-
   const classes = useStyles();
-
   return(
   <TableContainer component={Paper}>
   <Table className={classes.table} aria-label="customized table">
@@ -51,12 +45,11 @@ const CountryForm = props => {
   <TableBody>
   {props.countries.length > 0 ? ( 
     props.countries.map(country => 
-      
     <Fragment>
       <StyledTableRow key={country.id}>
-       <StyledTableCell component="th" scope="row">{country.id}</StyledTableCell>
+       <StyledTableCell component="th" scope="row">{country.capital}</StyledTableCell>
        <StyledTableCell align="right">{country.name}</StyledTableCell>
-       <StyledTableCell align="right">{country.capital}</StyledTableCell>
+       <StyledTableCell align="right">{country.id}</StyledTableCell>
       </StyledTableRow>
       <button
       onClick ={() => {
