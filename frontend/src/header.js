@@ -121,7 +121,7 @@ const Header = (props) => {
                 variant="contained"
                 onClick={() => handleButtonClick("/info")}
               >
-                Info
+                ADD
               </Button>
               <Button
                 variant="contained"
