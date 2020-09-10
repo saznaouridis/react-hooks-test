@@ -1,6 +1,6 @@
 import React, { useState, Fragment, useEffect } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
+import Header from "./header"
 //components 
 
 import AddCountryForm from './components/AddCountryForm'
@@ -52,21 +52,8 @@ const App = () => {
 	}
 	return (
 	<Router>
-		<div>
-			<nav>
-				<ul>
-					<li>
-						<Link to="/" >Home</Link>
-				  	</li>
-					<li>
-						<Link to="/info">Info</Link>
-				  	</li>
-				  	<li>
-						<Link to="/country">Countries</Link>
-				  	</li>
-				</ul>
-			</nav>
-			
+		<div>	
+		<Header />
 			<Switch>
 				<Route path="/info">
 					<Info />
@@ -101,6 +88,7 @@ const App = () => {
 					</div>
 				</Route>
 				<Route path="/">
+					
 					<Home />
 				</Route>
 			</Switch>
