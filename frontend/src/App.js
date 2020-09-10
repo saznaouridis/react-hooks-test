@@ -77,9 +77,13 @@ const App = () => {
 								</Fragment>
 								)}
 							</div>
+						</div>
+					</div>
 				</Route>
 				<Route path="/country">
-					
+					<div className="container">
+						<h1 id = "hed1">Application</h1>
+						<div className="flex-row">
 							<div className="flex-large classright">
 								<h2>View</h2>
 								<CountryForm countries={countries} editRow={editRow} deleteCountry={deleteCountry} />
