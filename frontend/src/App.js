@@ -8,6 +8,24 @@ import EditCountryForm from './components/EditCountryForm'
 import CountryForm from './components/CountryForm'
 import axios from 'axios';
 import './App.css'
+import { makeStyles } from '@material-ui/core/styles'
+import SvgIcon from '@material-ui/core/SvgIcon'
+
+const useStyles = makeStyles((theme) => ({
+	root: {
+	  '& > svg': {
+		margin: theme.spacing(2),
+	  },
+	},
+  }));
+
+function HomeIcon(props) {
+	return (
+	  <SvgIcon {...props}>
+		<path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+	  </SvgIcon>
+	);
+  }
 
 const App = () => {
 
@@ -101,7 +119,14 @@ const App = () => {
 	</Router>
 	)
 	function Home() {
-		return <h1 id = "hed2">Home</h1>;
+		const classes = useStyles();
+		return (
+			<div className={classes.root}>
+				<h1 id = "hed2">Home</h1>;
+				<HomeIcon style={{ fontSize: 40 }} />
+
+			</div>
+		)
 	  }
 }
 export default App
