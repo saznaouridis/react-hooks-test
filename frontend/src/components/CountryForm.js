@@ -53,8 +53,8 @@ const CountryForm = props => {
        <StyledTableCell align="right">
          <button
            onClick ={() => {
+            window.location ="/add"
             props.editRow(country)
-           
            }
          }
            className="button muted-button"
