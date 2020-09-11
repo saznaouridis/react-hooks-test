@@ -124,21 +124,18 @@ const App = () => {
 		const classes = useStyles();
 		return (
 			<div className={classes.root}>
-				<Grid container justify="center">
-					<Grid item>
-						<HomeIcon color="primary" style={{ fontSize: 50 }} />
-					</Grid>
-					<Grid item>
-						<Typography
-						align="center"
-						color="primary
-						className={classes.typographyStyle}">
-							Home
-						</Typography>
+				<Grid 
+				container 
+				justify="center"
+				alignItems="center"
+				style={{ height: "400px"}}
+				>
+					<Grid item xs={3} style={{ textAlign: "center"}}>
+						<HomeIcon color="primary" style={{ fontSize: 50  }} />
 					</Grid>
 				</Grid>
 			</div>
-		)
+		);
 	  }
 }
 export default App	
