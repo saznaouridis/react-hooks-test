@@ -54,6 +54,7 @@ const CountryForm = props => {
          <button
            onClick ={() => {
             props.editRow(country)
+            window.location="/add"
            }
          }
            className="button muted-button"
