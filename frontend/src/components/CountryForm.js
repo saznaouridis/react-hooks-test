@@ -74,10 +74,11 @@ const CountryForm = props => {
         onClick={() => {
           props.deleteCountry(country.id)
           window.location ="/add"
+          
         }}
           className="button muted-button"
         >
-          Delete  
+         <ArrowDownwardIcon fontSize="inherit" />
       </IconButton >   
       </StyledTableCell>
       </StyledTableRow>
