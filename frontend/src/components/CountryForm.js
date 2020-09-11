@@ -12,6 +12,7 @@ import IconButton from '@material-ui/core/IconButton';
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Button from '@material-ui/core/Button';
+import EditIcon from '@material-ui/icons/Edit';
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -55,7 +56,10 @@ const CountryForm = props => {
        <StyledTableCell component="th" scope="row">{country.name}</StyledTableCell>
        <StyledTableCell align="right">{country.capital}</StyledTableCell>
        <StyledTableCell align="right">
-         <button
+         <IconButton
+         aria-label="edit"
+         ssName={classes.margin} 
+         size="small"
            onClick ={() => {
             props.editRow(country)
            }
@@ -63,8 +67,8 @@ const CountryForm = props => {
            className="button muted-button"
            
       >
-        Edit
-        </button>
+        <EditIcon fontSize="inherit" />
+        </IconButton>
         </StyledTableCell>
         <StyledTableCell align="right">
         <IconButton 
@@ -73,9 +77,9 @@ const CountryForm = props => {
         size="small"
         onClick={() => {
           props.deleteCountry(country.id)
-          window.location ="/add"
-          
-        }}
+          window.location ="/add"  
+        }
+      }
           className="button muted-button"
         >
          <DeleteIcon fontSize="inherit" />
