@@ -73,6 +73,7 @@ const App = () => {
 		setEdit(true)
 		setCurCountry(country)
 	}
+	const classes = useStyles();
 	return (
 	<Router>
 		<div>	
@@ -106,12 +107,34 @@ const App = () => {
 				</div>
 				</Route>
 				<Route path="/country">
-					<div className="container">
-						<h1 id = "hed1">Application</h1>
-							<div className="flex-large classright">
-								<h2>View</h2>
+					<div className={classes.root}>	
+					<Grid
+					container 
+					direction="column"
+					justify="center"
+					alignItems="center"
+					>
+						<Grid item>
+						<Typography
+						align="center"
+						color="primary"
+						className={classes.TypographyStyle}
+						style={{ fontSize: 50  }}
+						>Application
+						</Typography>
+						</Grid>
+						<Grid item>
+							<Typography	
+								align="center"
+								color="primary"
+								className={classes.TypographyStyle}
+								style={{ fontSize: 30  }}
+								>View
 								<CountryForm countries={countries} editRow={editRow} deleteCountry={deleteCountry} />
-							</div>
+								</Typography>
+						</Grid>
+					</Grid>
+							
 						
 					</div>
 				</Route>
@@ -124,7 +147,6 @@ const App = () => {
 	</Router>
 	)
 	function Home() {
-		const classes = useStyles();
 		return (
 			<div className={classes.root}>
 				<Grid 
