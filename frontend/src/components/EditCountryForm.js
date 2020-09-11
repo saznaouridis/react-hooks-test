@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-
+import Button from "@material-ui/core/Button";
+import IconButton from "@material-ui/core/IconButton";
 
 const EditCountryForm = props => {
   const {updateCountry} = props;
@@ -33,8 +34,8 @@ const EditCountryForm = props => {
         <label for="capital">Capital</label>
         <input type="text" name="capital" value={country.capital} onChange={handleInputChange} />
       <p>
-        <button>Update Country</button>
-        <button onClick={() => props.setEdit(false)} className="button muted-button">
+        <button variant="contained" color="primary">Update Country</button>
+        <button variant="contained" color="primary" onClick={() => props.setEdit(false)} className="button muted-button">
         Cancel
         </button>
       </p>
