@@ -25,6 +25,7 @@ const EditCountryForm = props => {
       onSubmit={e => {
         e.preventDefault()
         updateCountry(country.id, country)
+        window.location = "/country"
       }}>
       <label for="country">Country</label>
       <input type="text" name="name" value={country.name} onChange={handleInputChange} />
