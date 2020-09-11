@@ -17,6 +17,9 @@ const useStyles = makeStyles((theme) => ({
 	root: {
 	  '& > svg': {
 		margin: theme.spacing(2),
+		TypographyStyle: {
+			color:"blue"
+		}
 	  },
 	},
   }));
