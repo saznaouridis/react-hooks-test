@@ -72,9 +72,6 @@ const CountryForm = props => {
       </button>   
       </StyledTableCell>
       </StyledTableRow>
-    
-     
-  )
     </Fragment>)
     ) : (
       <tr>
