@@ -123,7 +123,8 @@ const App = () => {
 		return (
 			<div className={classes.root}>
 				<h1 id = "hed2">Home;
-				<HomeIcon  style={{ fontSize: 40 }} />
+				<HomeIcon alignitems="center" justify="center"
+				 style={{ fontSize: 40 }} />
 				</h1>
 			</div>
 		)
