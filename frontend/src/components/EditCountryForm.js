@@ -4,8 +4,29 @@ import Button from "@material-ui/core/Button";
 import DeleteIcon from '@material-ui/icons/Delete';
 import IconButton from "@material-ui/core/IconButton";
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1
+  },
+  menuButton: {
+    marginRight: theme.spacing(2)
+  },
+  title: {
+    [theme.breakpoints.down("xs")]: {
+      flexGrow: 1
+    }
+  },
+  headerOptions: {
+    display: "flex",
+    flex: 1,
+    justifyContent: "space-evenly"
+  }
+}));
+
+
+
 const EditCountryForm = props => {
-  
+  const classes = useStyles();
   const {updateCountry} = props;
   const [ country, setCountry ] = useState(props.curCountry)
   useEffect(
@@ -37,10 +58,10 @@ const EditCountryForm = props => {
         <label for="capital">Capital</label>
         <input type="text" name="capital" value={country.capital} onChange={handleInputChange} />
       <p>
-        <Button variant="contained" color="primary">Update Country</Button>
-        <Button variant="contained" color="primary" onClick={() => props.setEdit(false)} className="button muted-button">
+        <button variant="contained" color="primary">Update Country</button>
+        <button variant="contained" color="primary" onClick={() => props.setEdit(false)} className="button muted-button">
         Cancel
-        </Button>
+        </button>
       </p>
     </form>
   )
