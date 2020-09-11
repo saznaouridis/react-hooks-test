@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react'
+import Button from "@material-ui/core/Button";
 
 const AddCountryForm = props => {
 	const initialState = { }
@@ -43,7 +44,7 @@ const AddCountryForm = props => {
 				<input type="text" name="capital" value={country.capital} onChange={handleInputChange} />
 			
 			<p>
-				<button className="btn btn-success">Add</button>
+				<Button variant="contained" size="small" color="primary" className={classes.margin}>Add</Button>
 			</p>
 		</form>
 		</Fragment>

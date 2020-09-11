@@ -65,7 +65,6 @@ const CountryForm = props => {
            }
          }
            className="button muted-button"
-           
       >
         <EditIcon fontSize="inherit" />
         </IconButton>
