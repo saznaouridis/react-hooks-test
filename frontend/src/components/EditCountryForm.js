@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 const EditCountryForm = props => {
+  const classes = useStyles();
   const {updateCountry} = props;
   const [ country, setCountry ] = useState(props.curCountry)
   useEffect(
@@ -47,8 +48,8 @@ const EditCountryForm = props => {
         <label for="capital">Capital</label>
         <input type="text" name="capital" value={country.capital} onChange={handleInputChange} />
       <p>
-        <button variant="contained" color="primary">Update Country</button>
-        <button variant="contained" color="primary" onClick={() => props.setEdit(false)} className="button muted-button">
+        <button variant="contained" size="medium" color="primary" className={classes.margin}>Update Country</button>
+        <button variant="contained" size="medium" color="primary" onClick={() => props.setEdit(false)} className={classes.margin}>
         Cancel
         </button>
       </p>
