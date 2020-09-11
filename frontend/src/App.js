@@ -122,11 +122,11 @@ const App = () => {
 		const classes = useStyles();
 		return (
 			<div className={classes.root}>
-				<h1 id = "hed2">Home</h1>;
-				<HomeIcon style={{ fontSize: 40 }} />
-
+				<h1 id = "hed2">Home;
+				<HomeIcon  alignItems= "center" justify = "center"style={{ fontSize: 40 }} />
+				</h1>
 			</div>
 		)
 	  }
 }
-export default App
+export default App	
