@@ -19,12 +19,11 @@ const App = () => {
 	// Setting state
 	const [ countries, setCountries ] = useState(countriesData)
 	const [ curCountry, setCurCountry ] = useState(initialState)
-	const [ edit, setEdit ] = useState(true)
+	const [ edit, setEdit ] = useState(false)
 
 	// CRUD operations
 
 	const addCountry = async (country) => {
-		setEdit(false)
 		const id = await axios.post(`/`,country);
 		getData();
 	}
@@ -34,6 +33,7 @@ const App = () => {
 		getData();
 	}
 	const updateCountry = async (id, updatedCountry) => {
+		setEdit(false)
 		console.log(id);
 		await axios.put(`/${id}`,updatedCountry);
 		getData();
@@ -47,6 +47,7 @@ const App = () => {
 		getData();
 	},[])
 	const editRow = async (country) => {
+		setEdit(true)
 		setCurCountry(country)
 	}
 	return (
@@ -63,7 +64,8 @@ const App = () => {
 									
 									<h2>Edit</h2>
 									<EditCountryForm
-									
+									edit={edit}
+									setEdit={setEdit}
 									curCountry={curCountry}
 									updateCountry={updateCountry}
 									
@@ -73,8 +75,6 @@ const App = () => {
 								<Fragment>
 									<h2>Fill the brackets</h2>
 									<AddCountryForm 
-									edit={edit}
-									setEdit={setEdit}
 									addCountry={addCountry} 
 									/>
 								</Fragment>
