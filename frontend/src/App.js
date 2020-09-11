@@ -126,12 +126,22 @@ const App = () => {
 			<div className={classes.root}>
 				<Grid 
 				container 
+				direction="column"
 				justify="center"
 				alignItems="center"
 				style={{ height: "400px"}}
 				>
 					<Grid item xs={3} style={{ textAlign: "center"}}>
 						<HomeIcon color="primary" style={{ fontSize: 50  }} />
+					</Grid>
+					<Grid item style={{ textAlign: "center"}}>
+						<Typography
+							align="center"
+							color="primary"
+							className={classes.TypographyStyle}
+							>
+							Home
+						</Typography>
 					</Grid>
 				</Grid>
 			</div>
