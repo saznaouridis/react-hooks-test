@@ -10,6 +10,7 @@ import axios from 'axios';
 import './App.css'
 import { makeStyles } from '@material-ui/core/styles'
 import SvgIcon from '@material-ui/core/SvgIcon'
+import Grid from '@material-ui/core/Grid'
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -122,11 +123,11 @@ const App = () => {
 		const classes = useStyles();
 		return (
 			<div className={classes.root}>
-				<h1 id = "hed2">Home</h1>
-				<h2>
-				<HomeIcon alignitems="center" justify="center"
-				 style={{ fontSize: 50 }} />
-				 </h2>
+				<Grid container justify="center">
+					<Grid item>
+						<HomeIcon color="primary" style={{ fontSize: 50 }}/>
+					</Grid>
+				</Grid>
 				
 			</div>
 		)
