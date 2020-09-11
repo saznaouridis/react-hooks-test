@@ -15,7 +15,6 @@ const EditCountryForm = props => {
     try{
     const { name, value } = e.target
     setCountry({ ...country, [name]: value })
-    window.location="/add"
   }catch (err) {
     console.log(err);
     alert("Error");
