@@ -122,10 +122,12 @@ const App = () => {
 		const classes = useStyles();
 		return (
 			<div className={classes.root}>
-				<h1 id = "hed2">Home
+				<h1 id = "hed2">Home</h1>
+				<h2>
 				<HomeIcon alignitems="center" justify="center"
 				 style={{ fontSize: 50 }} />
-				</h1>
+				 </h2>
+				
 			</div>
 		)
 	  }

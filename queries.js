@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-var client = require('./db').pool;
+var client = require('./db').Pool;
 client.connect();
 
 //  RETRIEVE ALL RECORDS FROM DATABASE TABLE NOW
