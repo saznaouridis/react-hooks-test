@@ -142,6 +142,7 @@ const App = () => {
 							align="center"
 							color="primary"
 							className={classes.TypographyStyle}
+							style={{ fontSize: 100  }}
 							>
 							Home
 						</Typography>
