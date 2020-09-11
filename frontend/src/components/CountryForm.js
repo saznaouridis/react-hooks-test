@@ -78,7 +78,7 @@ const CountryForm = props => {
         }}
           className="button muted-button"
         >
-         <ArrowDownwardIcon fontSize="inherit" />
+         <DeleteIcon fontSize="inherit" />
       </IconButton >   
       </StyledTableCell>
       </StyledTableRow>
