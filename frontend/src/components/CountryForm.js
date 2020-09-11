@@ -8,6 +8,10 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import FilterListIcon from '@material-ui/icons/FilterList';
+import IconButton from '@material-ui/core/IconButton';
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
+import DeleteIcon from '@material-ui/icons/Delete';
+import Button from '@material-ui/core/Button';
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -63,7 +67,10 @@ const CountryForm = props => {
         </button>
         </StyledTableCell>
         <StyledTableCell align="right">
-        <button
+        <IconButton 
+        aria-label="delete"
+        ssName={classes.margin} 
+        size="small"
         onClick={() => {
           props.deleteCountry(country.id)
           window.location ="/add"
@@ -71,7 +78,7 @@ const CountryForm = props => {
           className="button muted-button"
         >
           Delete  
-      </button>   
+      </IconButton >   
       </StyledTableCell>
       </StyledTableRow>
       

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
-import button from "@material-ui/core/Button";
+import Button from "@material-ui/core/Button";
 import DeleteIcon from '@material-ui/icons/Delete';
 import IconButton from "@material-ui/core/IconButton";
 import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
@@ -48,10 +48,10 @@ const EditCountryForm = props => {
         <label for="capital">Capital</label>
         <input placeholder="{country.capital}" type="text" name="capital" value={country.capital} onChange={handleInputChange} />
       <p>
-        <button variant="contained" size="medium" color="primary" className={classes.margin}>Update Country</button>
-        <button variant="contained" size="medium" color="primary" onClick={() => props.setEdit(false)} className={classes.margin}>
+        <Button variant="contained" size="medium" color="primary" className={classes.margin}>Update Country</Button>
+        <Button variant="contained" size="medium" color="primary" onClick={() => props.setEdit(false)} className={classes.margin}>
         Cancel
-        </button>
+        </Button>
       </p>
     </form>
   )
