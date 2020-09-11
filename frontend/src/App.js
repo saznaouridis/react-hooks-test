@@ -11,6 +11,7 @@ import './App.css'
 import { makeStyles } from '@material-ui/core/styles'
 import SvgIcon from '@material-ui/core/SvgIcon'
 import Grid from '@material-ui/core/Grid'
+import { Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -125,7 +126,14 @@ const App = () => {
 			<div className={classes.root}>
 				<Grid container justify="center">
 					<Grid item>
-						<HomeIcon color="primary" style={{ fontSize: 50 }}/>
+						<HomeIcon color="primary" />
+					</Grid>
+					<Grid item>
+						<Typography
+						align="center"
+						color="primary
+						className={classes.typographyStyle}">
+						</Typography>
 					</Grid>
 				</Grid>
 				
