@@ -3,16 +3,26 @@ import { makeStyles } from '@material-ui/core/styles';
 import Button from "@material-ui/core/Button";
 import DeleteIcon from '@material-ui/icons/Delete';
 import IconButton from "@material-ui/core/IconButton";
-import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
 const useStyles = makeStyles((theme) => ({
-  margin: {
-    margin: theme.spacing(1),
+  root: {
+    flexGrow: 1
   },
-  extendedIcon: {
-    marginRight: theme.spacing(1),
+  menuButton: {
+    marginRight: theme.spacing(2)
   },
+  title: {
+    [theme.breakpoints.down("xs")]: {
+      flexGrow: 1
+    }
+  },
+  headerOptions: {
+    display: "flex",
+    flex: 1,
+    justifyContent: "space-evenly"
+  }
 }));
+
 
 
 const EditCountryForm = props => {
@@ -43,15 +53,15 @@ const EditCountryForm = props => {
         window.location = "/country"
       }}>
       <label for="country">Country</label>
-      <input  placeholder="{country.name}" type="text" name="name" value={country.name} onChange={handleInputChange} />
+      <input type="text" name="name" value={country.name} onChange={handleInputChange} />
       
         <label for="capital">Capital</label>
-        <input placeholder="{country.capital}" type="text" name="capital" value={country.capital} onChange={handleInputChange} />
+        <input type="text" name="capital" value={country.capital} onChange={handleInputChange} />
       <p>
-        <button variant="contained" size="medium" color="primary" className={classes.margin}>Update Country</button>
-        <button variant="contained" size="medium" color="primary" onClick={() => props.setEdit(false)} className={classes.margin}>
+        <Button variant="contained" color="primary">Update Country</Button>
+        <Button variant="contained" color="primary" onClick={() => props.setEdit(false)} className="button muted-button">
         Cancel
-        </button>
+        </Button>
       </p>
     </form>
   )
