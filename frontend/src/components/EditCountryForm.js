@@ -43,10 +43,10 @@ const EditCountryForm = props => {
         window.location = "/country"
       }}>
       <label for="country">Country</label>
-      <input type="text" name="name" value={country.name} onChange={handleInputChange} />
+      <input  placeholder="{name}" type="text" name="name" value={country.name} onChange={handleInputChange} />
       
         <label for="capital">Capital</label>
-        <input type="text" name="capital" value={country.capital} onChange={handleInputChange} />
+        <input placeholder="{capital}" type="text" name="capital" value={country.capital} onChange={handleInputChange} />
       <p>
         <button variant="contained" size="medium" color="primary" className={classes.margin}>Update Country</button>
         <button variant="contained" size="medium" color="primary" onClick={() => props.setEdit(false)} className={classes.margin}>
