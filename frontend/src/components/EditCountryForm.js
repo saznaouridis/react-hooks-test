@@ -4,29 +4,8 @@ import Button from "@material-ui/core/Button";
 import DeleteIcon from '@material-ui/icons/Delete';
 import IconButton from "@material-ui/core/IconButton";
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1
-  },
-  menuButton: {
-    marginRight: theme.spacing(2)
-  },
-  title: {
-    [theme.breakpoints.down("xs")]: {
-      flexGrow: 1
-    }
-  },
-  headerOptions: {
-    display: "flex",
-    flex: 1,
-    justifyContent: "space-evenly"
-  }
-}));
-
-
-
 const EditCountryForm = props => {
-  const classes = useStyles();
+  
   const {updateCountry} = props;
   const [ country, setCountry ] = useState(props.curCountry)
   useEffect(
