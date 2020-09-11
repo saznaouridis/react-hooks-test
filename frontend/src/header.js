@@ -115,19 +115,25 @@ const Header = (props) => {
                 variant="contained"
                 onClick={() => handleButtonClick("/")}
               >
+                 <Typography variant="h8" className={classes.title} color="primary">
                 HOME
+                </Typography>
               </Button>
               <Button
                 variant="contained"
                 onClick={() => handleButtonClick("/add")}
               >
+                 <Typography variant="h8" className={classes.title} color="primary">
                 Add/Edit
+                </Typography>
               </Button>
               <Button
                 variant="contained"
                 onClick={() => handleButtonClick("/country")}
               >
+                 <Typography variant="h8" className={classes.title} color="primary">
                 Countries
+                </Typography>
               </Button>
             </div>
           )}
