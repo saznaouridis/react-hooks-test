@@ -132,7 +132,7 @@ const App = () => {
 				direction="column"
 				justify="center"
 				alignItems="center"
-				style={{ height: "400px"}}
+				style={{ height: "200px"}}
 				>
 					<Grid item xs={3} style={{ textAlign: "center"}}>
 						<HomeIcon color="primary" style={{ fontSize: 50  }} />
@@ -142,7 +142,7 @@ const App = () => {
 							align="center"
 							color="primary"
 							className={classes.TypographyStyle}
-							style={{ fontSize: 100  }}
+							style={{ fontSize: 50  }}
 							>
 							Home
 						</Typography>
