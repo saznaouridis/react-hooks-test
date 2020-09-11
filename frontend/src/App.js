@@ -49,6 +49,7 @@ const App = () => {
 	const editRow = async (country) => {
 		setEdit(true)
 		setCurCountry(country)
+		window.location="/add"
 	}
 	return (
 	<Router>
