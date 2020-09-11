@@ -34,10 +34,12 @@ const EditCountryForm = props => {
         <label for="capital">Capital</label>
         <input type="text" name="capital" value={country.capital} onChange={handleInputChange} />
       <p>
-        <button variant="contained" color="primary">Update Country</button>
-        <button variant="contained" color="primary"onClick={() => props.setEdit(false)} className="button muted-button">
+        <div>
+        <Button variant="contained" color="primary">Update Country</Button>
+        <Button variant="contained" color="primary"onClick={() => props.setEdit(false)} className="button muted-button">
         Cancel
-        </button>
+        </Button>
+        </div>
       </p>
     </form>
   )
