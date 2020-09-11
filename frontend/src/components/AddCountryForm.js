@@ -1,19 +1,6 @@
 import React, { Fragment, useState } from 'react'
-import Button from "@material-ui/core/Button";
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles((theme) => ({
-	margin: {
-	  margin: theme.spacing(1),
-	},
-	extendedIcon: {
-	  marginRight: theme.spacing(1),
-	},
-  }));
-  
 
 const AddCountryForm = props => {
-	const classes = useStyles();
 	const initialState = { }
 	const [ country, setCountry ] = useState(initialState)
 	const handleInputChange = e => {
@@ -56,7 +43,7 @@ const AddCountryForm = props => {
 				<input type="text" name="capital" value={country.capital} onChange={handleInputChange} />
 			
 			<p>
-				<Button variant="contained" size="small" color="primary" className={classes.margin}>Add</Button>
+				<button className="btn btn-success">Add</button>
 			</p>
 		</form>
 		</Fragment>
