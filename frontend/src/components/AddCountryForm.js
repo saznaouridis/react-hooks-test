@@ -7,7 +7,6 @@ const AddCountryForm = props => {
 		try{
 		const { name, value } = e.target
 		setCountry({ ...country, [name]: value })
-		window.location="/country"
 		}catch(err) {
 			console.log(err);
 			alert("Error");
@@ -22,6 +21,7 @@ const AddCountryForm = props => {
 			else {
 				props.addCountry(country)
 				setCountry(initialState)
+				window.location="/country"
 			}
 		}catch (err) {
 			console.log(err);
