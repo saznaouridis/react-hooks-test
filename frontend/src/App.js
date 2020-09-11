@@ -59,7 +59,6 @@ const App = () => {
 				<div className="flex-row">
 							<div className="flex-large classleft">
 								{edit ? (
-								window.location = "/add"
 								<Fragment>
 									
 									<h2>Edit</h2>
