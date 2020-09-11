@@ -57,7 +57,7 @@ const EditCountryForm = props => {
         <label for="capital">Capital</label>
         <input type="text" name="capital" value={country.capital} onChange={handleInputChange} />
       <p>
-        <Button variant="contained" color="primary"> onclick ={e => {updateCountry(country.id, country)}}> Update Country</Button>
+        <Button variant="contained" color="primary" onclick ={e => {updateCountry(country.id, country)}}> Update Country</Button>
         <Button variant="contained" color="primary" onClick={() => props.setEdit(false)} className="button muted-button">
         Cancel
         </Button>
