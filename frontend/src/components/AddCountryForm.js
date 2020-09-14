@@ -21,7 +21,7 @@ const AddCountryForm = (props) => {
 				alert("Invalid Input");
 			}
 			else {
-				props.addCountry(country)
+				addCountry(country)
 				setCountry(initialState)
 				window.location="/country"
 			}
