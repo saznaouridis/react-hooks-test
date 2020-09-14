@@ -15,7 +15,5 @@ export const updateCountry = async (id, updatedCountry) => {
   }
   export const getApiData = async() =>{
     const {data} = await axios.get(`/countries`);
-    setCountriesData(data);
-	setCountries(data);
-    return 
+    return data
   }
