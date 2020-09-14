@@ -1,6 +1,8 @@
 import React, { Fragment, useState } from 'react'
+import { addCountry } from '../api_helpers'
+import Button from "@material-ui/core/Button";
 
-const AddCountryForm = props => {
+const AddCountryForm = (props) => {
 	const initialState = { }
 	const [ country, setCountry ] = useState(initialState)
 	const handleInputChange = e => {
@@ -19,8 +21,9 @@ const AddCountryForm = props => {
 				alert("Invalid Input");
 			}
 			else {
-				props.addCountry(country)
-				setCountry(initialState)
+				addCountry(country)
+        setCountry(initialState)
+        props.ifDataChanged()
 				window.location="/country"
 			}
 		}catch (err) {
@@ -43,10 +46,10 @@ const AddCountryForm = props => {
 				<input type="text" name="capital" value={country.capital} onChange={handleInputChange} />
 			
 			<p>
-				<button className="btn btn-success">Add</button>
+				<Button className="btn btn-success">Add</Button>
 			</p>
 		</form>
 		</Fragment>
 	)
 }
-export default AddCountryForm
+export default AddCountryForm;

@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import SvgIcon from '@material-ui/core/SvgIcon'
-import Grid from '@material-ui/core/Grid'
-import { Typography } from '@material-ui/core';
+import { updateCountry } from '../api_helpers';
 
-const EditCountryForm = props => {
-  const {updateCountry} = props;
+const EditCountryForm = (props) => {
   const [ country, setCountry ] = useState(props.curCountry)
   useEffect(
     () => {
@@ -27,6 +23,7 @@ const EditCountryForm = props => {
     <form
       onSubmit={e => {
         e.preventDefault()
+        props.setEdit(false)
         updateCountry(country.id, country)
         window.location = "/country"
       }}>

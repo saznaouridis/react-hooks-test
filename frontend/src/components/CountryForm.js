@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment } from 'react';
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -7,11 +7,9 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import FilterListIcon from '@material-ui/icons/FilterList';
 import IconButton from '@material-ui/core/IconButton';
-import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 import DeleteIcon from '@material-ui/icons/Delete';
-import Button from '@material-ui/core/Button';
+import { deleteCountry } from '../api_helpers';
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -34,9 +32,9 @@ const useStyles = makeStyles({
     minWidth: 700,
   },
 });
-const CountryForm = props => {
+const CountryForm = (props) => {
   const classes = useStyles();
-  return(
+  return (
   <TableContainer component={Paper}>
   <Table className={classes.table} aria-label="customized table">
   <TableHead> 
@@ -56,14 +54,14 @@ const CountryForm = props => {
        <StyledTableCell align="right">{country.capital}</StyledTableCell>
        <StyledTableCell align="right">
          <button
-           onClick ={() => {
-            props.editRow(country)
-           }
-         }
-           className="button muted-button"
-           
-      >
-        Edit
+            className="button muted-button"
+            onClick ={() => {
+              props.editRow(country)
+              props.history.push('/add')
+            }
+          }   
+         >
+          Edit
         </button>
         </StyledTableCell>
         <StyledTableCell align="right">
@@ -72,9 +70,8 @@ const CountryForm = props => {
         ssName={classes.margin} 
         size="small"
         onClick={() => {
-          props.deleteCountry(country.id)
-          window.location ="/add"
-          
+          deleteCountry(country.id);
+          props.ifDataChanged();
         }}
           className="button muted-button"
         >
@@ -82,7 +79,6 @@ const CountryForm = props => {
       </IconButton >   
       </StyledTableCell>
       </StyledTableRow>
-      
     </Fragment>)
     ) : (
       <tr>
@@ -93,5 +89,5 @@ const CountryForm = props => {
     </Table>
   </TableContainer>
   );
-    }
-export default CountryForm
+}
+export default CountryForm;
