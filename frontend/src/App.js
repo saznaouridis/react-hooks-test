@@ -22,12 +22,6 @@ const App = () => {
 	const [ curCountry, setCurCountry ] = useState(initialState)
   const [ edit, setEdit ] = useState(false)
 
-
-const getApiData = async () =>{
-    const {data} = await axios.get(`/countries`);
-    setCountriesData(data);
-    setCountries(data);
-  }
 	useEffect(()=>{
     getApiData();
 	},[])
@@ -36,6 +30,10 @@ const getApiData = async () =>{
     setCurCountry(country)
   }
   
+
+
+
+
   const ifDataChanged = () => {
     let data = getApiData();
     setCountriesData(data);
