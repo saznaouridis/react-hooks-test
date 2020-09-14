@@ -8,7 +8,8 @@ import { Typography } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
 	root: {
 	  '& > svg': {
-		margin: theme.spacing(10),
+    margin: theme.spacing(2),
+    textAlign: 'center',
 		TypographyStyle: {
 			color:"blue"
 		}
@@ -51,11 +52,31 @@ const EditCountryForm = (props) => {
        
         <input placeholder="Enter Capital Name" type="text" name="capital" value={country.capital} onChange={handleInputChange} />
       <p>
-        <div>
-        <Button type="submit" size="small" variant="contained" color="primary">Update Country</Button> 
-        <Button type="submit" size="small" variant="contained" color="primary"onClick={() => props.setEdit(false)} className="button muted-button">
+        <div className={classes.root}>
+        <Grid container spacing={3}>
+        <Grid item xs={3}>
+        <Button 
+        type="submit" 
+        size="small" 
+        variant="contained"
+         color="primary"
+         >
+        Update Country
+        </Button> 
+        </Grid>
+        <Grid item xs={3}>
+        <Button 
+        type="submit" 
+        size="small" 
+        variant="contained" 
+        color="primary"
+        onClick={() => props.setEdit(false)} 
+        className="button muted-button"
+        >
         Cancel
         </Button>
+        </Grid>
+        </Grid>
         </div>
       </p>
     </form>
