@@ -1,11 +1,9 @@
-import React, { Fragment, useState } from 'react'
+import React, { useState } from 'react'
 import { addCountry } from '../api_helpers'
 import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
-import EditIcon from '@material-ui/icons/Edit';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import NavigationIcon from '@material-ui/icons/Navigation';
+
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -64,7 +62,7 @@ const AddCountryForm = (props) => {
 				<input type="text" name="capital" value={country.capital} onChange={handleInputChange} />
 			
 			<p>
-				<Fab color="primary" aria-label="add" type="submit">
+				<Fab color="primary" aria-label="add" type="submit" style={{ fontSize: 25  }}>
 					<AddIcon />
 				</Fab>
 			</p>

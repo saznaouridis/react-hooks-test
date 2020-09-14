@@ -23,7 +23,7 @@ const App = () => {
   const [ edit, setEdit ] = useState(false)
 
 
-const getApiData = async () =>{
+    getApiData = async () =>{
     const {data} = await axios.get(`/countries`);
     setCountriesData(data);
     setCountries(data);
