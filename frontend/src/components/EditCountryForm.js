@@ -27,11 +27,11 @@ const EditCountryForm = (props) => {
         updateCountry(country.id, country)
         window.location = "/country"
       }}>
-      <label for="country">Country</label>
-      <input type="text" name="name" value={country.name} onChange={handleInputChange} />
       
-        <label for="capital">Capital</label>
-        <input type="text" name="capital" value={country.capital} onChange={handleInputChange} />
+      <input placeholder="Enter Country Name" type="text" name="name" value={country.name} onChange={handleInputChange} />
+      
+       
+        <input placeholder="Enter Capital Name" type="text" name="capital" value={country.capital} onChange={handleInputChange} />
       <p>
         <div>
         <button variant="contained" color="primary">Update Country</button> 
