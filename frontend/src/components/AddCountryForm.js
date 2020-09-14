@@ -3,12 +3,14 @@ import { addCountry } from '../api_helpers'
 import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
+import TextField from '@material-ui/core/TextField';
 
 
 const useStyles = makeStyles((theme) => ({
 	root: {
 	  '& > *': {
 		margin: theme.spacing(1),
+		width: '25ch',
 	  },
 	},
 	extendedIcon: {
@@ -49,19 +51,21 @@ const AddCountryForm = (props) => {
 	return (
 		<div className={classes.root}>
 		<form
+			className={classes.root}
+			noValidate autoComplete="off"
 			onSubmit={handleOnSubmit}	
 		>
+			<TextField 
+				id="standard-basic" 
+				placeholder="Enter Country name"
+				type="text" 
+				name="name" 
+				className="form-control" 
+				value={country.name} 
+				onChange={handleInputChange} />
 			
-			<input 
-			placeholder="Enter Country name"
-			type="text" 
-			name="name" 
-			className="form-control" 
-			value={country.name} 
-			onChange={handleInputChange} />
-			
-				
-				<input 
+			<TextField 
+				id="standard-basic" 
 				placeholder="Enter Capital name"
 				type="text" 
 				name="capital" 
