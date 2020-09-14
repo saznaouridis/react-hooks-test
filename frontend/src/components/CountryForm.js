@@ -76,7 +76,7 @@ const CountryForm = (props) => {
         color="primary" 
         aria-label="delete"
         ssName={classes.margin} 
-        size="small"
+        size="medium"
         type= "submit"
         onClick={() => {
           deleteCountry(country.id);

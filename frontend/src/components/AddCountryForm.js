@@ -51,15 +51,22 @@ const AddCountryForm = (props) => {
 		<form
 			onSubmit={handleOnSubmit}	
 		>
-			<label className="text-center mt-5" for="countries">Countries</label>
-			<input type="text" 
+			
+			<input 
+			placeholder="Enter Country name"
+			type="text" 
 			name="name" 
 			className="form-control" 
 			value={country.name} 
 			onChange={handleInputChange} />
 			
-				<label for="capitals">Capitals</label>
-				<input type="text" name="capital" value={country.capital} onChange={handleInputChange} />
+				
+				<input 
+				placeholder="Enter Capital name"
+				type="text" 
+				name="capital" 
+				value={country.capital} 
+				onChange={handleInputChange} />
 			
 			<p>
 				<Fab color="primary" aria-label="add" type="submit" size="small">
