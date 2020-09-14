@@ -56,8 +56,9 @@ const CountryForm = (props) => {
        <StyledTableCell align="right">{country.capital}</StyledTableCell>
        <StyledTableCell align="right">
        <Fab 
-            color="primary" 
+            color="secondary" 
             aria-label="edit"
+            ssName={classes.margin} 
             type= "submit"
             size="small"
             className="button muted-button"
@@ -72,6 +73,7 @@ const CountryForm = (props) => {
         </StyledTableCell>
         <StyledTableCell align="right">
         <IconButton 
+        color="primary" 
         aria-label="delete"
         ssName={classes.margin} 
         size="small"
