@@ -8,7 +8,7 @@ import { Typography } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
 	root: {
 	  '& > svg': {
-		margin: theme.spacing(2),
+		margin: theme.spacing(10),
 		TypographyStyle: {
 			color:"blue"
 		}
