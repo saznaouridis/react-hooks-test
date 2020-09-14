@@ -46,7 +46,7 @@ const AddCountryForm = (props) => {
 				<input type="text" name="capital" value={country.capital} onChange={handleInputChange} />
 			
 			<p>
-				<Button variant="contained" color="primary" >Add</Button>
+				<Button color="primary" >Add</Button>
 			</p>
 		</form>
 		</Fragment>
