@@ -53,8 +53,8 @@ const EditCountryForm = (props) => {
         <input placeholder="Enter Capital Name" type="text" name="capital" value={country.capital} onChange={handleInputChange} />
       <p>
         <div className={classes.root}>
-        <Grid container spacing={3}>
-        <Grid item xs={3}>
+        <Grid container spacing={10}>
+        <Grid item xs={8}>
         <Button 
         type="submit" 
         size="small" 
@@ -64,7 +64,7 @@ const EditCountryForm = (props) => {
         Update Country
         </Button> 
         </Grid>
-        <Grid item xs={3}>
+        <Grid item xs={8}>
         <Button 
         type="submit" 
         size="small" 
