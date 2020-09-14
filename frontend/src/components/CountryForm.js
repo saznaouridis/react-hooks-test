@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from 'react'
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -79,6 +79,7 @@ const CountryForm = (props) => {
       </IconButton >   
       </StyledTableCell>
       </StyledTableRow>
+      
     </Fragment>)
     ) : (
       <tr>

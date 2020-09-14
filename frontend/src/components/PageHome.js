@@ -3,7 +3,6 @@ import Grid from '@material-ui/core/Grid';
 import { Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import SvgIcon from '@material-ui/core/SvgIcon';
-
 const useStyles = makeStyles((theme) => ({
 	root: {
 	  '& > svg': {
@@ -14,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
 	  },
 	},
 }));
+
 const HomeIcon = (props) => {
 	return (
 	  <SvgIcon {...props}>
@@ -21,32 +21,34 @@ const HomeIcon = (props) => {
 	  </SvgIcon>
 	);
 }
+
 const PageHome = () => {
-    const classes = useStyles();
-    return (
-      <div className={classes.root}>
-        <Grid 
-        container 
-        direction="column"
-        justify="center"
-        alignItems="center"
-        style={{ height: "200px"}}
-        >
-          <Grid item xs={3} style={{ textAlign: "center"}}>
-            <HomeIcon color="primary" style={{ fontSize: 50  }} />
-          </Grid>
-          <Grid item style={{ textAlign: "center"}}>
-            <Typography
-              align="center"
-              color="primary"
-              className={classes.TypographyStyle}
-              style={{ fontSize: 50  }}
-              >
-              Home
-            </Typography>
-          </Grid>
+  const classes = useStyles();
+  return (
+    <div className={classes.root}>
+      <Grid 
+      container 
+      direction="column"
+      justify="center"
+      alignItems="center"
+      style={{ height: "200px"}}
+      >
+        <Grid item xs={3} style={{ textAlign: "center"}}>
+          <HomeIcon color="primary" style={{ fontSize: 50  }} />
         </Grid>
-      </div>
-    );
-  }
-  export default PageHome;
+        <Grid item style={{ textAlign: "center"}}>
+          <Typography
+            align="center"
+            color="primary"
+            className={classes.TypographyStyle}
+            style={{ fontSize: 50  }}
+            >
+            Home
+          </Typography>
+        </Grid>
+      </Grid>
+    </div>
+  );
+}
+
+export default PageHome;
