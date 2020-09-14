@@ -1,29 +1,22 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Header from "./header"
-import axios from 'axios'
+import Header from "./header";
+import axios from 'axios';
 //components 
-
 import PageAdd from './components/PageAdd';
 import PageHome from './components/PageHome';
 import PageCountry from './components/PageCountry';
-
-import './App.css'
-
+import './App.css';
 
 const App = () => {
-
 	// Data
 	const [countriesData,setCountriesData] = useState([]);	
 	const initialState = { id: null, name: '', capital: '' }
-
 	// Setting state
 	const [ countries, setCountries ] = useState(countriesData)
 	const [ curCountry, setCurCountry ] = useState(initialState)
   const [ edit, setEdit ] = useState(false)
-
-
-const getApiData = async () =>{
+  const getApiData = async () =>{
     const {data} = await axios.get(`/countries`);
     setCountriesData(data);
     setCountries(data);
@@ -43,7 +36,6 @@ const getApiData = async () =>{
     setCountriesData(data);
     setCountries(data);
   }
-
 	return (
 	<Router>
 		<Header />
@@ -57,4 +49,4 @@ const getApiData = async () =>{
 	</Router>
 	)
 }
-export default App
+export default App;

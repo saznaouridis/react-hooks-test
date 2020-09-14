@@ -41,16 +41,13 @@ const Header = (props) => {
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
   };
-
   const handleMenuClick = (pageURL) => {
     history.push(pageURL);
     setAnchorEl(null);
   };
-
   const handleButtonClick = (pageURL) => {
     history.push(pageURL);
   };
-
   const menuItems = [
     {
       menuTitle: "Home",
@@ -65,7 +62,6 @@ const Header = (props) => {
       pageURL: "/country"
     }
   ];
-
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -142,5 +138,4 @@ const Header = (props) => {
     </div>
   );
 };
-
 export default withRouter(Header);
