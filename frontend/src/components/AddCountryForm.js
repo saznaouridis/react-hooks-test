@@ -1,8 +1,26 @@
 import React, { Fragment, useState } from 'react'
 import { addCountry } from '../api_helpers'
-import Button from "@material-ui/core/Button";
+import { makeStyles } from '@material-ui/core/styles';
+import Fab from '@material-ui/core/Fab';
+import AddIcon from '@material-ui/icons/Add';
+import EditIcon from '@material-ui/icons/Edit';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import NavigationIcon from '@material-ui/icons/Navigation';
+
+const useStyles = makeStyles((theme) => ({
+	root: {
+	  '& > *': {
+		margin: theme.spacing(1),
+	  },
+	},
+	extendedIcon: {
+	  marginRight: theme.spacing(1),
+	},
+  }));
+
 
 const AddCountryForm = (props) => {
+	const classes = useStyles();
 	const initialState = { }
 	const [ country, setCountry ] = useState(initialState)
 	const handleInputChange = e => {
@@ -31,7 +49,7 @@ const AddCountryForm = (props) => {
 		}
 	}
 	return (
-		<Fragment>
+		<div className={classes.root}>
 		<form
 			onSubmit={handleOnSubmit}	
 		>
@@ -46,10 +64,12 @@ const AddCountryForm = (props) => {
 				<input type="text" name="capital" value={country.capital} onChange={handleInputChange} />
 			
 			<p>
-				<Button type="submit"label="Submit"primary={true}>Add</Button>
+				<Fab color="primary" aria-label="add" type="submit">
+					<AddIcon />
+				</Fab>
 			</p>
 		</form>
-		</Fragment>
+		</div>
 	)
 }
 export default AddCountryForm;
