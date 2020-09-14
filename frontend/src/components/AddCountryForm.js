@@ -22,7 +22,8 @@ const AddCountryForm = (props) => {
 			}
 			else {
 				addCountry(country)
-				setCountry(initialState)
+        setCountry(initialState)
+        props.ifDataChanged()
 				window.location="/country"
 			}
 		}catch (err) {
