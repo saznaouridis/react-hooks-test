@@ -9,7 +9,7 @@ import PageHome from './components/PageHome';
 import PageCountry from './components/PageCountry';
 
 import './App.css'
-import { getApiData } from './api_helpers';
+
 
 const App = () => {
 
@@ -23,7 +23,7 @@ const App = () => {
   const [ edit, setEdit ] = useState(false)
 
 
-    getApiData = async () =>{
+const getApiData = async () =>{
     const {data} = await axios.get(`/countries`);
     setCountriesData(data);
     setCountries(data);
