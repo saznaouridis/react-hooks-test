@@ -3,7 +3,7 @@ import { updateCountry } from '../api_helpers';
 import Button from "@material-ui/core/Button";
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
-import { Typography } from '@material-ui/core';
+import TextField from '@material-ui/core/TextField';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -40,17 +40,33 @@ const EditCountryForm = (props) => {
   }
   return (
     <form
-      onSubmit={e => {
+        className={classes.root} 
+        noValidate autoComplete="off"
+        onSubmit={e => {
         e.preventDefault()
         props.setEdit(false)
         updateCountry(country.id, country)
         window.location = "/country"
       }}>
-      
-      <input placeholder="Enter Country Name" type="text" name="name" value={country.name} onChange={handleInputChange} />
-      
-       
-        <input placeholder="Enter Capital Name" type="text" name="capital" value={country.capital} onChange={handleInputChange} />
+      <TextField    
+       id="filled-basic"
+       label="Filled" 
+       variant="filled" 
+       placeholder="Enter Country Name" 
+       type="text" name="name" 
+       value={country.name} 
+       onChange={handleInputChange} 
+       />
+      <TextField   
+       id="filled-basic"
+       label="Filled" 
+       variant="filled" 
+       placeholder="Enter Capital Name"
+       type="text" 
+       name="capital" 
+       value={country.capital}
+       onChange={handleInputChange} 
+       />
       <p>
         <div className={classes.root}>
         <Grid container spacing={10}>
@@ -64,7 +80,7 @@ const EditCountryForm = (props) => {
         Update Country
         </Button> 
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={4}>
         <Button 
         type="submit" 
         size="small" 
