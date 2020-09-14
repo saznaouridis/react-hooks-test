@@ -34,7 +34,7 @@ const PageCountry = (props) => {
             className={classes.TypographyStyle}
             style={{ fontSize: 50  }}
           >
-            Application
+            Country Table
           </Typography>
         </Grid>
         <Grid item>
