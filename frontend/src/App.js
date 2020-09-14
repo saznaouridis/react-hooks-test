@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Header from "./header"
+import axios from 'axios'
 //components 
 
 import PageAdd from './components/PageAdd';
@@ -20,12 +21,15 @@ const App = () => {
 	const [ countries, setCountries ] = useState(countriesData)
 	const [ curCountry, setCurCountry ] = useState(initialState)
   const [ edit, setEdit ] = useState(false)
-  
-	useEffect(()=>{
-    let data = getApiData();
-    console.log(data)
+
+
+const getApiData = async () =>{
+    const {data} = await axios.get(`/countries`);
     setCountriesData(data);
     setCountries(data);
+  }
+	useEffect(()=>{
+    getApiData();
 	},[])
 	const editRow = async (country) => {
 		setEdit(true)
