@@ -10,6 +10,7 @@ import Paper from '@material-ui/core/Paper';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { deleteCountry } from '../api_helpers';
+import Button from "@material-ui/core/Button";
 
 const StyledTableCell = withStyles((theme) => ({
   head: {
@@ -53,7 +54,9 @@ const CountryForm = (props) => {
        <StyledTableCell component="th" scope="row">{country.name}</StyledTableCell>
        <StyledTableCell align="right">{country.capital}</StyledTableCell>
        <StyledTableCell align="right">
-         <button
+         <Button
+            type= "submit"
+            size="small"
             className="button muted-button"
             onClick ={() => {
               props.editRow(country)
@@ -62,7 +65,7 @@ const CountryForm = (props) => {
           }   
          >
           Edit
-        </button>
+        </Button>
         </StyledTableCell>
         <StyledTableCell align="right">
         <IconButton 

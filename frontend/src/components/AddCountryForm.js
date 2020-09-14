@@ -62,7 +62,7 @@ const AddCountryForm = (props) => {
 				<input type="text" name="capital" value={country.capital} onChange={handleInputChange} />
 			
 			<p>
-				<Fab color="primary" aria-label="add" type="submit" style={{ fontSize: 25  }}>
+				<Fab color="primary" aria-label="add" type="submit" size="small">
 					<AddIcon />
 				</Fab>
 			</p>
