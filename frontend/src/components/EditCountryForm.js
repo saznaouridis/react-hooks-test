@@ -49,8 +49,6 @@ const EditCountryForm = (props) => {
         updateCountry(country.id, country)
         //window.location = "/country"
         history.push('/country')
-        props.getApiData()
-       
       }}>
       <TextField    
        id="filled-basic"
