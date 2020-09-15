@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 
+
 const useStyles = makeStyles((theme) => ({
 	root: {
 	  '& > svg': {
@@ -46,9 +47,9 @@ const EditCountryForm = (props) => {
         e.preventDefault()
         props.setEdit(false)
         updateCountry(country.id, country)
-        
         //window.location = "/country"
         history.push('/country')
+        props.ifDataChanged();
       }}>
       <TextField    
        id="filled-basic"
