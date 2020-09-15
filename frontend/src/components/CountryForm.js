@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { useHistory } from "react-router-dom";
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -35,6 +36,7 @@ const useStyles = makeStyles({
   },
 });
 const CountryForm = (props) => {
+  const history = useHistory();
   const classes = useStyles();
   return (
   <TableContainer component={Paper}>
@@ -64,7 +66,7 @@ const CountryForm = (props) => {
             className="button muted-button"
             onClick ={() => {
               props.editRow(country)
-              props.history.push('/add')
+              history.push('/add')
             }
           }   
          >

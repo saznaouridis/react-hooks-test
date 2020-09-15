@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useHistory } from "react-router-dom";
 import { updateCountry } from '../api_helpers';
 import Button from "@material-ui/core/Button";
 import { makeStyles } from '@material-ui/core/styles';
@@ -16,7 +17,9 @@ const useStyles = makeStyles((theme) => ({
 	  },
 	},
 }));
+
 const EditCountryForm = (props) => {
+  const history = useHistory();
   const classes = useStyles();
   const [ country, setCountry ] = useState(props.curCountry)
   useEffect(
@@ -44,7 +47,7 @@ const EditCountryForm = (props) => {
         props.setEdit(false)
         updateCountry(country.id, country)
         //window.location = "/country"
-        props.history.push('/country')
+        history.push('/country')
       }}>
       <TextField    
        id="filled-basic"
