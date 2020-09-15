@@ -47,7 +47,6 @@ const EditCountryForm = (props) => {
         e.preventDefault()
         props.setEdit(false)
         updateCountry(country.id, country)
-        addCountry(country.id, country)
         //window.location = "/country"
         history.push('/country')
        
