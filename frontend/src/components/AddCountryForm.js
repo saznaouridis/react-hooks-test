@@ -4,6 +4,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
 import TextField from '@material-ui/core/TextField';
+import { useHistory } from "react-router-dom";
+
+
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -29,6 +32,7 @@ const AddCountryForm = (props) => {
 			alert("Error");
 		}
 	}
+	const history = useHistory();
 	const handleOnSubmit = e => {
 		e.preventDefault()
 		try{
@@ -38,9 +42,9 @@ const AddCountryForm = (props) => {
 			else {
 				addCountry(country)
         setCountry(initialState)
-        props.ifDataChanged()
-				//window.location="/country"
-				history.push('/country')
+		props.ifDataChanged()
+		//window.location="/country"
+		history.push('/country')
 			}
 		}catch (err) {
 			console.log(err);
