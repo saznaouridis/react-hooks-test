@@ -5,7 +5,6 @@ import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
 import TextField from '@material-ui/core/TextField';
 
-
 const useStyles = makeStyles((theme) => ({
 	root: {
 	  '& > *': {
@@ -17,8 +16,6 @@ const useStyles = makeStyles((theme) => ({
 	  marginRight: theme.spacing(1),
 	},
   }));
-
-
 const AddCountryForm = (props) => {
 	const classes = useStyles();
 	const initialState = { }

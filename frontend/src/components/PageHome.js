@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
 	  },
 	},
 }));
-
 const HomeIcon = (props) => {
 	return (
 	  <SvgIcon {...props}>
@@ -21,7 +20,6 @@ const HomeIcon = (props) => {
 	  </SvgIcon>
 	);
 }
-
 const PageHome = () => {
   const classes = useStyles();
   return (
@@ -50,5 +48,4 @@ const PageHome = () => {
     </div>
   );
 }
-
 export default PageHome;

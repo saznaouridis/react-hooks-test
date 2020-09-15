@@ -15,8 +15,6 @@ const useStyles = makeStyles((theme) => ({
 	  },
 	},
 }));
-
-
 const PageAdd = (props) => {
    const classes = useStyles();
   return (
@@ -60,5 +58,4 @@ const PageAdd = (props) => {
     
   )
 }
-
 export default PageAdd;

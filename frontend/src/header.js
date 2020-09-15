@@ -29,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-evenly"
   }
 }));
-
 const Header = (props) => {
   const { history } = props;
   const classes = useStyles();
@@ -37,7 +36,6 @@ const Header = (props) => {
   const open = Boolean(anchorEl);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
-
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
   };

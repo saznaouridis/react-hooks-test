@@ -16,9 +16,6 @@ const useStyles = makeStyles((theme) => ({
 	  },
 	},
 }));
-
-
-
 const EditCountryForm = (props) => {
   const classes = useStyles();
   const [ country, setCountry ] = useState(props.curCountry)
