@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
-import { addCountry, updateCountry } from '../api_helpers';
+import { updateCountry } from '../api_helpers';
 import Button from "@material-ui/core/Button";
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
@@ -49,6 +49,7 @@ const EditCountryForm = (props) => {
         updateCountry(country.id, country)
         //window.location = "/country"
         history.push('/country')
+        props.getApiData()
        
       }}>
       <TextField    
