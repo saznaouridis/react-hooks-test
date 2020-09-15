@@ -43,8 +43,8 @@ const EditCountryForm = (props) => {
         e.preventDefault()
         props.setEdit(false)
         updateCountry(country.id, country)
-        window.location = "/country"
-        //props.history.push('/country')
+        //window.location = "/country"
+        props.history.push('/country')
       }}>
       <TextField    
        id="filled-basic"
