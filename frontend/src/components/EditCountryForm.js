@@ -50,7 +50,7 @@ const EditCountryForm = (props) => {
         props.ifDataChanged();
         //window.location = "/country"
         history.push('/country')
-        props.ifDataChanged();
+        
       }}>
       <TextField    
        id="filled-basic"
