@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 export const addCountry = async (country) => {
-  await axios.post(`/`,country);
-  return
+  let res = await axios.post(`/`,country);
+  return res;
 }
 export const deleteCountry = async (id) => {
   await axios.delete(`/${id}`);

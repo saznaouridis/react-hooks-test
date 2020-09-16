@@ -40,8 +40,13 @@ const AddCountryForm = (props) => {
 			} else {
 				addCountry(country)
 
-				country.id = country.length + 1;
-				setCountry([ ...country, country ]);
+				//country.id = country.length + 1;
+				//setCountry([ ...country, country ]);
+				setCountry((prevState) => {
+					const data = [...prevState.data];
+					data.push(res.data.rows);
+					return {...prevState, data};
+				});
 
 				/*
 				props.ifDataChanged()
