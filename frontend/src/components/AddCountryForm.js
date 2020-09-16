@@ -40,9 +40,9 @@ const AddCountryForm = (props) => {
 			}
 			else {
 				addCountry(country)
-				props.ifDataChanged()
+				//props.ifDataChanged()
         setCountry(initialState)
-		props.ifDataChanged()
+		//props.ifDataChanged()
 		//window.location="/country"
 		history.push('/country')
 			}
