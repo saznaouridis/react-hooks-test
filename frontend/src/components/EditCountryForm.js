@@ -47,10 +47,10 @@ const EditCountryForm = (props) => {
         e.preventDefault()
         props.setEdit(false)
         updateCountry(country.id, country)
-       
+
         //window.location = "/country"
         history.push('/country')
-        props.ifDataChanged();
+        props.getApiData();
         
       }}>
       <TextField    
