@@ -44,7 +44,7 @@ const AddCountryForm = (props) => {
 				//setCountry([ ...country, country ]);
 				setCountry((prevState) => {
 					const data = [...prevState.data];
-					data.push(res.data.rows);
+					data.push(res.data);
 					return {...prevState, data};
 				});
 
