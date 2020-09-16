@@ -50,7 +50,7 @@ const EditCountryForm = (props) => {
 
         //window.location = "/country"
         history.push('/country')
-        props.getApiData();
+        props.ifDataChanged();
         
       }}>
       <TextField    
