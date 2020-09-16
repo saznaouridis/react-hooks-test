@@ -37,14 +37,20 @@ const AddCountryForm = (props) => {
 		try{
 			if (!country.name || !country.capital) {
 				alert("Invalid Input");
-			}
-			else {
+			} else {
 				addCountry(country)
+
+				country.id = country.length + 1;
+				setCountry([ ...country, country ]);
+
+				/*
 				props.ifDataChanged()
-        setCountry(initialState)
-		props.ifDataChanged()
-		//window.location="/country"
-		history.push('/country')
+				setCountry(initialState)
+				props.ifDataChanged()
+				//window.location="/country"
+				*/
+
+				history.push('/country')
 			}
 		}catch (err) {
 			console.log(err);
