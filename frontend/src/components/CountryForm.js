@@ -66,6 +66,7 @@ const CountryForm = (props) => {
             className="button muted-button"
             onClick ={() => {
               props.editRow(country)
+              //props.ifDataChanged();
               history.push('/add')
             }
           }   
